@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm create:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm build:*)",
+      "Bash(claude mcp:*)",
+      "Read(//c/Users/juanm/.claude/**)",
+      "mcp__21st-dev-magic__21st_magic_component_builder"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "21st-dev-magic"
+  ]
+}

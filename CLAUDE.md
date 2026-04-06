@@ -1,13 +1,13 @@
-# [Project Name] — Claude Instructions
+# Phone Store Las Breñas — Claude Instructions
 
-> Stack: [e.g., Next.js 14 · TypeScript · PostgreSQL · Prisma · Railway]
-> Last updated: [YYYY-MM-DD]
+> Stack: Next.js · TypeScript · Tailwind CSS · Vercel
+> Last updated: 2026-03-28
 
 ## Project Context
 
-[2–3 sentences: what this product does, who it serves, and the core problem it solves.]
+Landing page de venta de celulares para una tienda local en Las Breñas, Chaco. Permite a los clientes locales ver modelos y precios sin depender de redes sociales, con CTA directo a WhatsApp. El frontend es exportado desde 21stdev — Claude solo integra y organiza el código exportado sin crear UI nueva.
 
-**Tech stack summary**: [Frontend] · [Backend] · [Database] · [Hosting]
+**Tech stack summary**: Next.js (static) · Sin backend · Sin base de datos · Vercel
 
 ---
 
@@ -39,10 +39,11 @@ These apply to all agents at all times. No exceptions without explicit human ins
 2. **TODO.md is the living backlog.** Agents may add items, mark items complete, and move items to "Completed". Preserve section order and existing item priority — do not reorder items within a section unless explicitly asked to reprioritize.
 3. **All commits use Conventional Commits format** (see Git Conventions below).
 4. **Update the relevant `docs/` file** after every significant change before marking a task complete.
-5. **Run tests before marking any implementation task complete.**
+5. **No hay tests en v1** — sitio estático. Omitir el requisito de tests para marcar tareas como completadas.
 6. **Never hardcode secrets, credentials, or environment-specific values** in source code.
 7. **Consult `docs/technical/DECISIONS.md`** before proposing changes that may conflict with prior architectural decisions.
 8. **Always delegate to the right specialist.** If a task touches frontend, backend, database, UX/design, QA, documentation, CI/CD, Docker, or copy/SEO — invoke the appropriate agent immediately. Do not implement it yourself. The delegation table above is binding, not advisory.
+9. **No crear UI nueva.** El frontend viene de 21stdev. Solo integrar y organizar el código exportado.
 
 ---
 
@@ -50,11 +51,10 @@ These apply to all agents at all times. No exceptions without explicit human ins
 
 ```
 src/                    # Application source code
-  app/                  # [e.g., Next.js App Router pages]
-  components/           # Shared UI components
+  app/                  # Next.js App Router pages and layouts
+  components/           # Shared UI components (from 21stdev export)
   lib/                  # Utilities, helpers, shared logic
-tests/
-  e2e/                  # Playwright E2E tests (*.spec.ts)
+public/                 # Static assets (images, icons)
 docs/
   user/USER_GUIDE.md    # User-facing documentation
   technical/            # Architecture, API, DB, decisions
@@ -80,9 +80,9 @@ docs/
 
 Examples:
 ```
-feat(auth): add OAuth2 login with Google
-fix(api): handle null response from payment provider
-docs(user-guide): update onboarding section after flow change
+feat(seo): add local business structured data
+fix(whatsapp): correct phone number in CTA link
+docs(content): update keyword strategy for Las Breñas
 ```
 
 ### Branch Naming
@@ -105,42 +105,28 @@ refactor/<description>
 
 ## Code Style
 
-> Fill in when project tooling is set up.
-
 - **Language**: TypeScript (strict mode)
-- **Formatter**: [Prettier — config in `.prettierrc`]
-- **Linter**: [ESLint — config in `.eslintrc`]
-- **Import style**: [absolute imports from `src/`]
-- **No `console.log`** in production code — use the project logger utility
+- **Formatter**: Prettier
+- **Linter**: ESLint
+- **Import style**: absolute imports from `src/`
+- **No `console.log`** in production code
 - **No commented-out code** committed — delete it or track it in TODO.md
 
 ---
 
 ## Testing Conventions
 
-> Fill in when test infrastructure is set up.
-
-- **Unit tests**: [Vitest — colocated as `*.test.ts` next to source files]
-- **E2E tests**: [Playwright — in `tests/e2e/*.spec.ts`]
-- **Run unit**: `[npm test]`
-- **Run E2E**: `[npm run test:e2e]`
-- **Coverage target**: 80% for new features
-- E2E tests use Page Object Model pattern and `data-testid` selectors
+- No tests definidos para v1 (landing page estática)
+- Si se agregan en el futuro: Playwright E2E en `tests/e2e/*.spec.ts`
 
 ---
 
 ## Environment & Commands
 
-> Fill in when project is initialized.
-
-- **Node**: [x.x.x] (see `.nvmrc`)
-- **Package manager**: [npm / pnpm / yarn]
-- `[npm run dev]` — start dev server
-- `[npm run build]` — production build
-- `[npm test]` — unit tests
-- `[npm run test:e2e]` — E2E tests
-- `[npm run lint]` — lint check
-- `[npm run typecheck]` — TypeScript check
+- **Package manager**: pnpm
+- `pnpm dev` — start dev server
+- `pnpm build` — production build
+- `pnpm lint` — lint check
 
 ---
 
@@ -148,6 +134,5 @@ refactor/<description>
 
 @docs/technical/ARCHITECTURE.md
 @docs/technical/DECISIONS.md
-@docs/technical/API.md
-@docs/technical/DATABASE.md
+@docs/content/CONTENT_STRATEGY.md
 @docs/user/USER_GUIDE.md

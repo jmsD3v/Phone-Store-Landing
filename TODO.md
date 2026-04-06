@@ -7,30 +7,28 @@
 
 ## In Progress
 
-- [ ] (WIP) #001 — [Short description of what's currently being worked on] [area: setup] → [.tasks/001-short-title.md](.tasks/001-short-title.md)
+_(nada en curso)_
 
 ---
 
 ## Up Next (prioritized)
-
-- [ ] #002 — [Short description] [area: backend] → [.tasks/002-short-title.md](.tasks/002-short-title.md)
-- [ ] #003 — [Short description] [area: frontend] → [.tasks/003-short-title.md](.tasks/003-short-title.md)
-- [ ] #004 — [Short description] [area: database] → [.tasks/004-short-title.md](.tasks/004-short-title.md)
+- [ ] #002 — Definir copy y estrategia de keywords para SEO local [area: content] → [.tasks/002-copy-seo-local.md](.tasks/002-copy-seo-local.md)
+- [ ] #003 — Implementar SEO local: title, meta description, structured data LocalBusiness [area: frontend] → [.tasks/003-seo-local-meta-tags.md](.tasks/003-seo-local-meta-tags.md)
+- [ ] #004 — Integrar CTA de WhatsApp con número y mensaje pre-escrito [area: frontend] → [.tasks/004-whatsapp-cta.md](.tasks/004-whatsapp-cta.md)
 
 ---
 
 ## Backlog
 
-- [ ] #005 — [Short description] [area: frontend] → [.tasks/005-short-title.md](.tasks/005-short-title.md)
-- [ ] #006 — [Short description] [area: backend] → [.tasks/006-short-title.md](.tasks/006-short-title.md)
-- [ ] #007 — [Short description] [area: docs] → [.tasks/007-short-title.md](.tasks/007-short-title.md)
-- [ ] #008 — [Short description] [area: qa] → [.tasks/008-short-title.md](.tasks/008-short-title.md)
+- [ ] #005 — Configurar Vercel deployment y conectar dominio [area: infra] → [.tasks/005-vercel-deployment.md](.tasks/005-vercel-deployment.md)
+- [ ] #006 — Performance audit: Core Web Vitals y optimización de imágenes [area: frontend] → [.tasks/006-performance-audit.md](.tasks/006-performance-audit.md)
 
 ---
 
 ## Completed
 
 - [x] #000 — Initial project setup and template configuration → [.tasks/000-initial-project-setup.md](.tasks/000-initial-project-setup.md)
+- [x] #001 — Integrar código exportado de 21stdev en el repositorio [area: frontend] → [.tasks/001-integrar-21stdev-export.md](.tasks/001-integrar-21stdev-export.md)
 
 ---
 
@@ -39,19 +37,9 @@
 When adding new items, use this format:
 
 ```
-- [ ] #NNN — Brief description of the task [area: frontend|backend|database|qa|docs|infra|design] → [.tasks/NNN-short-title.md](.tasks/NNN-short-title.md)
+- [ ] #NNN — Brief description of the task [area: frontend|backend|database|qa|docs|infra|design|content] → [.tasks/NNN-short-title.md](.tasks/NNN-short-title.md)
 ```
 
 Every TODO item must have a corresponding `.tasks/NNN-*.md` file. @project-manager creates both together.
-
-**Area tags** help agents know which specialist to use:
-- `frontend` → @frontend-developer
-- `backend` → @backend-developer
-- `database` → @database-expert
-- `design` → @ui-ux-designer
-- `qa` → @qa-engineer
-- `docs` → @documentation-writer
-- `infra` → @systems-architect
-- `setup` → general
 
 **Priority**: Items higher in "Up Next" are higher priority. Agents move completed items to "Completed" and may add new items to "Backlog". Only humans reorder items within a section to change priority, unless explicitly asked to reprioritize.
