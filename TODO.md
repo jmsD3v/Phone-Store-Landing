@@ -13,8 +13,6 @@ _(nada en curso)_
 
 ## Up Next (prioritized)
 - [ ] #002 — Definir copy y estrategia de keywords para SEO local [area: content] → [.tasks/002-copy-seo-local.md](.tasks/002-copy-seo-local.md)
-- [ ] #003 — Implementar SEO local: title, meta description, structured data LocalBusiness [area: frontend] → [.tasks/003-seo-local-meta-tags.md](.tasks/003-seo-local-meta-tags.md)
-- [ ] #004 — Integrar CTA de WhatsApp con número y mensaje pre-escrito [area: frontend] → [.tasks/004-whatsapp-cta.md](.tasks/004-whatsapp-cta.md)
 
 ---
 
@@ -28,7 +26,10 @@ _(nada en curso)_
 ## Completed
 
 - [x] #000 — Initial project setup and template configuration → [.tasks/000-initial-project-setup.md](.tasks/000-initial-project-setup.md)
-- [x] #001 — Integrar código exportado de 21stdev en el repositorio [area: frontend] → [.tasks/001-integrar-21stdev-export.md](.tasks/001-integrar-21stdev-export.md)
+- [x] #001 — Integrar código exportado de 21stdev en el repositorio [area: frontend] → [.tasks/001-integrar-21stdev-export.md](.tasks/001-integrar-21stdev-export.md) _(nota: la dependencia de 21stdev fue retirada en #007 / ADR-002)_
+- [x] #003 — Implementar SEO local: title, meta description, structured data LocalBusiness [area: frontend] → [.tasks/003-seo-local-meta-tags.md](.tasks/003-seo-local-meta-tags.md)
+- [x] #004 — Integrar CTA de WhatsApp con número y mensaje pre-escrito [area: frontend] → [.tasks/004-whatsapp-cta.md](.tasks/004-whatsapp-cta.md)
+- [x] #007 — Desacoplar de 21stdev, arreglar tooling (lint), y sentar base de plantilla reutilizable [area: frontend] → [.tasks/007-template-pivot-decouple-21stdev.md](.tasks/007-template-pivot-decouple-21stdev.md)
 
 ---
 

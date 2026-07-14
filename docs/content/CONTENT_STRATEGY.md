@@ -110,7 +110,7 @@ No aplica para v1 — sitio de una sola página.
 
 ## Page Copy Library
 
-Copy pendiente de definición. El frontend viene de 21stdev — @copywriter-seo debe proveer los textos para integrar en los componentes.
+Copy pendiente de definición final — @copywriter-seo debe proveer los textos para integrar en `lib/site-config.ts` (identidad, SEO) y `app/page.tsx` (copy de sección).
 
 ---
 

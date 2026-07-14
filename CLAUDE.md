@@ -1,13 +1,13 @@
 # Phone Store Las Breñas — Claude Instructions
 
-> Stack: Next.js · TypeScript · Tailwind CSS · Vercel
-> Last updated: 2026-03-28
+> Stack: Next.js 16 · TypeScript · Tailwind CSS · Vercel
+> Last updated: 2026-07-13
 
 ## Project Context
 
-Landing page de venta de celulares para una tienda local en Las Breñas, Chaco. Permite a los clientes locales ver modelos y precios sin depender de redes sociales, con CTA directo a WhatsApp. El frontend es exportado desde 21stdev — Claude solo integra y organiza el código exportado sin crear UI nueva.
+Landing page de venta de celulares para una tienda local en Las Breñas, Chaco. Permite a los clientes locales ver modelos y precios sin depender de redes sociales, con CTA directo a WhatsApp. El diseño original se generó con 21stdev; el código se mantiene directamente en este repo y sirve como plantilla base para futuras landings de e-commerce local — ver ADR-002 en `docs/technical/DECISIONS.md`.
 
-**Tech stack summary**: Next.js (static) · Sin backend · Sin base de datos · Vercel
+**Tech stack summary**: Next.js 16 (static) · Sin backend · Sin base de datos · Vercel
 
 ---
 
@@ -43,17 +43,16 @@ These apply to all agents at all times. No exceptions without explicit human ins
 6. **Never hardcode secrets, credentials, or environment-specific values** in source code.
 7. **Consult `docs/technical/DECISIONS.md`** before proposing changes that may conflict with prior architectural decisions.
 8. **Always delegate to the right specialist.** If a task touches frontend, backend, database, UX/design, QA, documentation, CI/CD, Docker, or copy/SEO — invoke the appropriate agent immediately. Do not implement it yourself. The delegation table above is binding, not advisory.
-9. **No crear UI nueva.** El frontend viene de 21stdev. Solo integrar y organizar el código exportado.
+9. **`lib/site-config.ts` is the single source of truth for business identity.** Business name, address, WhatsApp number, SEO copy, and JSON-LD all read from it. When reusing this repo as a template for a new client, that file (plus the product catalog in `app/page.tsx`) is the only place that should need edits — do not re-hardcode business data elsewhere.
 
 ---
 
 ## Project Structure
 
 ```
-src/                    # Application source code
-  app/                  # Next.js App Router pages and layouts
-  components/           # Shared UI components (from 21stdev export)
-  lib/                  # Utilities, helpers, shared logic
+app/                    # Next.js App Router pages, layouts, metadata routes
+components/             # Shared UI components
+lib/                    # site-config.ts (business identity single source of truth), utilities
 public/                 # Static assets (images, icons)
 docs/
   user/USER_GUIDE.md    # User-facing documentation
