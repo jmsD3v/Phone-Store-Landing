@@ -71,3 +71,14 @@ temp/
 
 # MCP config (contains API keys — do not commit)
 .mcp.json
+
+# --- Base de seguridad e higiene (2026-10) ---
+!.env.sample
+!.env.template
+logs/
+*.key
+*.p12
+*.pfx
+.pnpm-store/
+.pnpm-debug.log*
+next-env.d.ts
